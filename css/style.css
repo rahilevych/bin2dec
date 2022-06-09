@@ -1,0 +1,85 @@
+body {
+  padding: 0;
+  margin: 0;
+  background: #040330;
+}
+
+h1 {
+  margin-top: 80px;
+  color: white;
+  text-align: center;
+}
+
+.box {
+  height: 600px;
+  width: 500px;
+  background: none;
+  border-radius: 3px;
+  color: white;
+  margin: 0 auto;
+  margin-top: 100px;
+  -webkit-box-shadow: 0 0 30px rgba(255, 255, 255, 0.8);
+          box-shadow: 0 0 30px rgba(255, 255, 255, 0.8);
+  padding: 100px auto;
+}
+
+.box__input {
+  margin: 0 auto;
+  width: 450px;
+  height: 50px;
+  border: 2px solid white;
+  background: none;
+  color: white;
+}
+
+.box__label {
+  font-size: 18px;
+}
+
+.box__checkbox {
+  position: relative;
+  width: 60px;
+  height: 30px;
+  -webkit-appearance: none;
+  background: none;
+  border-radius: 15px;
+  border: 2px solid white;
+  top: 40px;
+  left: 400px;
+}
+
+.box__checkbox::before {
+  content: '';
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  border-radius: 15px;
+  background: white;
+  top: -2px;
+  left: -2px;
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  -webkit-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.box__checkbox:checked {
+  background: white;
+}
+
+.box__checkbox:checked::before {
+  background: #040330;
+  left: 30px;
+  border: 2px solid white;
+}
+
+.converter {
+  position: relative;
+}
+
+#binary-number,
+#decimal-number {
+  margin: 50px auto;
+  margin-left: 20px;
+}
+/*# sourceMappingURL=style.css.map */
