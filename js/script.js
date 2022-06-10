@@ -21,18 +21,28 @@ function bin2dec(num) {
 }
 
 function dec2bin(num) {
-    num = Number(num);
-    let bin = [];
-    while (num > 0) {
-        bin.unshift(num % 2);
-        num = (num - num % 2) / 2
+
+    if (num > 0) {
+        num = Number(num);
+        let bin = [];
+        while (num > 0) {
+            bin.unshift(num % 2);
+            num = (num - num % 2) / 2
+        }
+        return bin.join("")
+    } else {
+        alert("err")
+
     }
-    return bin.join("")
 }
 
 function numToArray(num) {
+
     const arr = Array.from(num);
     return arr;
+
+    alert("err");
+
 }
 
 function toOutput(checkbox, output) {

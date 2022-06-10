@@ -22,13 +22,100 @@ h1 {
     margin-top: 100px;
     box-shadow: 0 0 30px rgba(255, 255, 255, 0.8);
     padding: 100px auto;
+    &__button {
+        margin-left: 25px;
+        text-align: center;
+        margin-top: 25px;
+        width: 450px;
+        height: 50px;
+        position: relative;
+        display: inline-block;
+        text-decoration: none;
+        padding: 10px 30px;
+        text-transform: uppercase;
+        color: white;
+        background: none;
+        font-size: 16px;
+        letter-spacing: 2px;
+        transition: 0.5s;
+        &:hover {
+            color: rgba(255, 255, 255, 1);
+            text-decoration: none;
+            span:nth-child(1) {
+                transform: scaleY(1);
+                transform-origin: bottom;
+                transition: transform 0.5s;
+            }
+            span:nth-child(2) {
+                transform: scaleX(1);
+                transform-origin: left;
+                transition: transform 0.5s;
+            }
+            span:nth-child(3) {
+                transform: scaleY(1);
+                transform-origin: bottom;
+                transition: transform 0.5s;
+                transition-delay: 0.3s;
+            }
+            span:nth-child(4) {
+                transform: scaleX(1);
+                transform-origin: left;
+                transition: transform 0.5s;
+                transition-delay: 0.3s;
+            }
+        }
+        span {
+            color: white;
+            display: block;
+            position: absolute;
+            background: white;
+            &:nth-child(1) {
+                left: 0;
+                bottom: 0;
+                width: 2px;
+                height: 100%;
+                transform: scaleY(0);
+                transform-origin: top;
+                transition: transform 0.5s;
+            }
+            &:nth-child(2) {
+                left: 0;
+                bottom: 0;
+                height: 2px;
+                width: 100%;
+                transform: scaleX(0);
+                transform-origin: right;
+                transition: transform 0.5s;
+            }
+            &:nth-child(3) {
+                right: 0;
+                bottom: 0;
+                height: 100%;
+                width: 2px;
+                transform: scaleY(0);
+                transform-origin: top;
+                transition: transform 0.5s;
+                transition-delay: 0.3s;
+            }
+            &:nth-child(4) {
+                left: 0;
+                top: 0;
+                height: 2px;
+                width: 100%;
+                transform: scaleX(0);
+                transform-origin: right;
+                transition: transform 0.5s;
+                transition-delay: 0.3s;
+            }
+        }
+    }
     &__input {
         margin: 0 auto;
         width: 450px;
         height: 50px;
         border: 2px solid $whiteColor;
         background: none;
-        color: white
+        color: white;
     }
     &__label {
         font-size: 18px;
@@ -70,12 +157,14 @@ h1 {
     position: relative;
 }
 
-#input-label {}
+#input-label,
+#output-label {
+    font-size: 20px;
+}
 
-#output-label {}
-
-#binary-number,
-#decimal-number {
-    margin: 50px auto;
-    margin-left: 20px;
+#input-number,
+#output-number,
+#input-label,
+#output-label {
+    margin: 0 calc((100% - 450px)/2);
 }
