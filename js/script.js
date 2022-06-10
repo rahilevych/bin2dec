@@ -41,7 +41,7 @@ function numToArray(num) {
     const arr = Array.from(num);
     return arr;
 
-    alert("err");
+
 
 }
 
